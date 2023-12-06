@@ -30,17 +30,22 @@ const itemContainer = document.querySelector(".items-container");
 
 images.forEach((element, index) => {
 
+    let classimage = "item";
     if (index === 0) {
-        itemContainer.innerHTML +=
-            `<div class="item active">
-        <img class="fix_img" src="${element.image}" alt="">
-        <h1 class="title">${element.title}</h1>
-        <h2 class="subtitle">${element.text}</h2>
-    </div>`
+        classimage += " active"
     }
 
+    // if (index === 0) {
+    //     itemContainer.innerHTML +=
+    //         `<div class="item active">
+    //     <img class="fix_img" src="${element.image}" alt="">
+    //     <h1 class="title">${element.title}</h1>
+    //     <h2 class="subtitle">${element.text}</h2>
+    // </div>`
+    // }
+
     itemContainer.innerHTML +=
-        `<div class="item">
+        `<div class="${classimage}">
         <img class="fix_img" src="${element.image}" alt="">
         <h1 class="title">${element.title}</h1>
         <h2 class="subtitle">${element.text}</h2>
@@ -71,7 +76,6 @@ downBtn.addEventListener("click", function () {
 
         //aggiungo la classe active all'elemento successivo
         items[activeItem].classList.add('active');
-
 
     }
 
