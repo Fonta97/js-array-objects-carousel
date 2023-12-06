@@ -26,63 +26,51 @@ const images = [
     }
 ];
 
-const container = document.querySelector(".items-container");
-
-for (let i = 0; i < images.length; i++) {
-    const carousel =
-        `<div class="item active">
-        <img src="${images[i].image}" alt="">
-        <div class="title">${images[i].title}</div>
-        <div class="text">${images[i].text}</div>
-        <button class="next"><i class="fa-solid fa-angle-down" style="color: #000000;"></i></button>
-                <button class="previous"><i class="fa-solid fa-angle-up" style="color: #000000;"></i></button> -->
-    </div>`
-
-    container.innerHTML += carousel;
-}
-
-const items = document.getElementsByClassName('item');
+const items = document.getElementsByClassName("item");
+console.log(items);
 
 let activeItem = 0;
 
-const next = document.querySelector('.next');
+//navigazione in su
+const downBtn = document.getElementById("angle_down");
 
-next.addEventListener('click', function () {
+//aggiungo l'azione di scroll sopra al mio bottone
+downBtn.addEventListener("click", function () {
 
     if (activeItem < items.length - 1) {
-
+        //tolgo la classe active dall'elemento corrente
         items[activeItem].classList.remove('active');
-        items[activeItem].classList.add('hidden');
 
+        //incremento l'indice dell'elemento da visualizzare
         activeItem++;
 
+        //aggiungo la classe active all'elemento successivo
         items[activeItem].classList.add('active');
-        items[activeItem].classList.remove('hidden');
 
 
-        if (activeItem === items.length - 1) {
-            next.classList.add('hidden');
-        }
     }
-});
 
-const previous = document.querySelector('.previous')
+}
+)
 
-previous.addEventListener('click', function () {
 
-    if (activeItem < items.length + 1) {
+//navigazione in su
+const upBtn = document.getElementById("angle_up");
 
+//aggiungo l'azione di scroll sopra al mio bottone
+upBtn.addEventListener("click", function () {
+
+    if (activeItem > 0) {
+        //tolgo la classe active dall'elemento corrente
         items[activeItem].classList.remove('active');
-        items[activeItem].classList.add('hidden');
 
+        //decremento l'indice dell'elemento da visualizzare
         activeItem--;
 
+        //aggiungo la classe active all'elemento successivo
         items[activeItem].classList.add('active');
-        items[activeItem].classList.remove('hidden');
 
-
-        if (activeItem === items.length + 1) {
-            previous.classList.add('hidden');
-        }
     }
-});
+
+}
+)

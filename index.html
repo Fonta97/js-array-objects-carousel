@@ -1,22 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Carosello Birbantello</title>
+    <meta charset="UTF-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Il mio foglio di stile -->
     <link rel="stylesheet" href="css/style.css">
+    <title>Carousel</title>
+
 </head>
 
+
+
 <body>
-    <div class="container">
-        <div class="carousel">
-            <div class="items-container"></div>
+    <main>
+
+        <div class="slider">
+
+            <div class="items-container">
+
+                <div class="item active">
+                    <img class="fix_img" src="img/01.webp" alt="">
+                </div>
+                <div class="item">
+                    <img class="fix_img" src="img/02.webp" alt="">
+                </div>
+                <div class="item">
+                    <img class="fix_img" src="img/03.webp" alt="">
+                </div>
+                <div class="item">
+                    <img class="fix_img" src="img/04.webp" alt="">
+                </div>
+                <div class="item">
+                    <img class="fix_img" src="img/05.webp" alt="">
+                </div>
+
+                <button id="angle_up"><i class="fa-solid fa-angle-up"></i>
+                </button>
+
+                <button id="angle_down"><i class="fa-solid fa-angle-down"></i>
+                </button>
+            </div>
+
         </div>
-    </div>
-    <script type="text/javascript" src="js/script.js"></script>
+
+    </main>
+
+
+    <!-- JS -->
+    <script src="js/script.js">
+
+    </script>
 </body>
+
 
 </html>
