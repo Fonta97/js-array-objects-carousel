@@ -26,13 +26,38 @@ const images = [
     }
 ];
 
+const itemContainer = document.querySelector(".items-container");
+
+images.forEach((element, index) => {
+
+    if (index === 0) {
+        itemContainer.innerHTML +=
+            `<div class="item active">
+        <img class="fix_img" src="${element.image}" alt="">
+        <h1 class="title">${element.title}</h1>
+        <h2 class="subtitle">${element.text}</h2>
+    </div>`
+    }
+
+    itemContainer.innerHTML +=
+        `<div class="item">
+        <img class="fix_img" src="${element.image}" alt="">
+        <h1 class="title">${element.title}</h1>
+        <h2 class="subtitle">${element.text}</h2>
+    </div>`
+});
+
+
+
+
+
 const items = document.getElementsByClassName("item");
 console.log(items);
 
 let activeItem = 0;
 
 //navigazione in su
-const downBtn = document.getElementById("angle_down");
+const downBtn = document.getElementById("angle_right");
 
 //aggiungo l'azione di scroll sopra al mio bottone
 downBtn.addEventListener("click", function () {
@@ -55,7 +80,7 @@ downBtn.addEventListener("click", function () {
 
 
 //navigazione in su
-const upBtn = document.getElementById("angle_up");
+const upBtn = document.getElementById("angle_left");
 
 //aggiungo l'azione di scroll sopra al mio bottone
 upBtn.addEventListener("click", function () {
@@ -74,3 +99,5 @@ upBtn.addEventListener("click", function () {
 
 }
 )
+
+

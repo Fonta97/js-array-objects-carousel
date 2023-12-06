@@ -38,22 +38,22 @@ button i {
     font-size: 20px;
 }
 
-#angle_up {
+#angle_left {
     position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
+    left: 2%;
+    top: 45%;
+
 }
 
-#angle_down {
+#angle_right {
     position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%);
+    right: 2%;
+    bottom: 45%;
 }
 
 
 .item {
+    position: relative;
     display: none;
 }
 
@@ -73,4 +73,21 @@ img {
 
 .active {
     display: block;
+}
+
+
+.title {
+    font-size: 25px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    color: white;
+}
+
+.subtitle {
+    font-size: 15px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    color: white;
 }
